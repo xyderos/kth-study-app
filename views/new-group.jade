@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  #content
+    h2 Create New Study Group
+    
+    #createGroup
+      fieldset
+        input#inputSubject(type='text', placeholder='Subject')
+        br
+        br
+        input#inputLocation(type='text', placeholder='Location')
+        br
+        br
+        textarea#inputDescription(type='text', placeholder='Description' cols='50' rows='5')
+        br
+        br
+        button#btnCreateGroup Create Group

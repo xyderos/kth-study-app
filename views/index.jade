@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  #content
+    p#introduction Welcome #{name}, this is an app to meet other KTH students to study together. 
+      button#btnSignOut Sign Out
+   
+    h2 
+      form(action="/groups/create")
+        button#btnNewGroup(type="submit") New Group
+    
+    #groups

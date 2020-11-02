@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  #content
+    h2= subject + ' Study Group' 
+    p 
+      strong Created by&nbsp;
+      =owner
+      strong &nbsp;at&nbsp;
+      =timeStamp 
+    p
+      strong Location:&nbsp;
+      =location
+    p 
+      strong Number of members:&nbsp;
+      =members.length
+    p 
+      strong Members:&nbsp;
+      =members
+    p 
+      strong Description: 
+      p=description
+    br
+    button#btnJoinGroup Join Group
+      button#btnDeleteGroup Delete
+
+  #comments
+    h2 Comments
+
+    #commentForm
+      form
+        textarea#inputComment(type='text', placeholder='Comment...' cols='50' rows='5')
+        br
+        br
+        button#btnSendComment Send
+
+    each value, index in comments
+      #comment
+        p 
+          strong 
+            =value.name
+          strong :&nbsp;
+          =value.msg

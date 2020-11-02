@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  #content
+    h2 Login
+
+    #loginForm
+      fieldset
+        input#inputUserEmail(type='text', placeholder='Email')
+        br
+        input#inputUserPassword(type='text', placeholder='Password')
+        br
+        br
+        button#btnLoginUser Login
+    
+    br
+    form(action="/users/create")
+      button(type="submit") Create a new account   
+          
+    #errorMsg
+      h2
